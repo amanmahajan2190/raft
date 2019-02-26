@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id "org.jruyi.thrift" version "0.4.0"
+}
+
+apply plugin: 'java'
+
+group 'raft'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+
+    test {
+        java {
+            srcDirs = ['src/test/java']
+        }
+    }
+}
+
+dependencies {
+    compile group: 'org.apache.thrift', name: 'libthrift', version: '0.9.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
