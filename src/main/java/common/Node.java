@@ -6,12 +6,12 @@ import java.util.Set;
 public class Node {
 
     private String address;
-    private String name;
+    private String nodeId;
     Set<Node> peers;
 
     public Node(String address, String name) {
         this.address = address;
-        this.name = name;
+        this.nodeId = name;
         this.peers = new HashSet<>();
     }
 
@@ -24,12 +24,12 @@ public class Node {
         this.address = address;
     }
 
-    public String getName() {
-        return name;
+    public String getNodeId() {
+        return nodeId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNodeId(String nodeId) {
+        this.nodeId = nodeId;
     }
 
     public void addPeer(Node node) {
